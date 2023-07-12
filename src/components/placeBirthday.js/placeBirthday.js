@@ -1,38 +1,27 @@
-import './placeBirthday.css'
-
+import { buttonCalendar } from './buttonCalendar';
+import './placeBirthday.css';
 
 export const placeBirthday = () => {
-    const placeBirthday = document.querySelector('#placeBirthday')
+    const placeBirthday = document.querySelector('#placeBirthday');
 
     placeBirthday.innerHTML = `
-    <div class="buttonCalendar">
-        <add-to-calendar-button
-        name="Mili Birthday"
-        description="Ven a mi fiesta"
-        startDate="2023-07-19"
-        startTime="20:30"
-        endDate="2023-07-20"
-        endTime="05:30"
-        timeZone="America/Buenos_Aires"
-        location="World Wide Web"
-        options="'Apple','Google','iCal','Outlook.com','Yahoo','Microsoft365','MicrosoftTeams'"
-        listStyle="modal"
-        buttonStyle="3d"
-        trigger="click"
-        hideIconButton
-        hideCheckmark
-        label="Agendar"
-        background="#000"
-        language="es"
-        class="custom-button-style"
-        ></add-to-calendar-button>
+    <div class="containerPlaceBirthday">
+      <div class="buttonCalendar">
+        <h2>Día</h2>
+        <p>Miércoles 19 de junio - 17hs</p>
+        <button id="my-default-button">Agendar</button>
+      </div>
+      <div class="buttonPlace">
+        <h2>Lugar</h2>
+        <p>Salon Avril</p>
+        <button>Confirmar<br>asistencia</button>
+      </div>
+      <div class="buttonDirections">
+        <h2>Direccion</h2>
+        <p>Av. Pergamino 203 - CABA</p>
+        <button>¿Como<br>llegar?</button> 
+      </div>
     </div>
-    <script>
-  // Get the button element
-  const button = document.querySelector('#custom-button button');
-
-  // Change the background color
-  button.style.backgroundColor = '#000';
-</script>
-    `
-}
+  `;
+    buttonCalendar();
+};

@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^4.4.0"
+  },
+  "dependencies": {
+    "add-to-calendar-button": "^2.2.10"
   }
 }
