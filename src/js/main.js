@@ -1,6 +1,9 @@
 import '../css/style.css';
 import { loader } from '../components/loader/loader';
 import { actualizarCuentaRegresiva } from '../components/countdown/countdown';
+import { placeBirthday } from '../components/placeBirthday.js/placeBirthday';
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('#app').innerHTML = `
@@ -13,9 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
             a mis 15 años
           </p>
         </div>
-        <section id="countdown">
-  
-        </section>
+
+        <section id="countdown"></section>
+
+        <section class="sectionPlaceBirthday" id="placeBirthday"></section>
       </div>
     </section>
   `;
@@ -24,8 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     // Muestra el preloader utilizando la función loader
     loader();
-  
-    // Muestra la cuenta regresiva
-    actualizarCuentaRegresiva();
   });
+      // Muestra la cuenta regresiva
+      actualizarCuentaRegresiva();
+      // Muestra el la seccion donde se hacen reservas, el lugar de la fiesta y como llegar
+      placeBirthday();
 });

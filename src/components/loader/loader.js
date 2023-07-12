@@ -16,6 +16,9 @@ export const loader = async () => {
   // Esperar a que la imagen de fondo del contenido se cargue
   await waitForBackgroundImageLoad();
 
+  // Simular un retraso de 2 segundos antes de ocultar el loader
+  await new Promise(resolve => setTimeout(resolve, 2000));
+
   // Ocultar el loader y mostrar el contenido
   loaderElement.style.display = 'none';
   contentElement.style.display = 'block';

@@ -1,0 +1,11 @@
+.buttonCalendar{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-button-style button {
+    background-color: #000 !important;
+  }
+  
