@@ -68,3 +68,13 @@
 
 /* Configuraciones del mapa */
 
+.map{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.map iframe {
+  margin: 1rem 0; 
+}

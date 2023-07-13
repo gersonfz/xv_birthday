@@ -4,8 +4,10 @@ export const modalMap = (modal) => {
     modal.innerHTML = `
     <div class="modal-content">
         <span class="close">&times;</span>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.635386207243!2d-58.41228692454813!3d-34.613380372950786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf0e488df63%3A0x780a09e4f181b5d5!2sGral.%20Urquiza%20250%2C%20C1215%20CABA!5e0!3m2!1ses!2sar!4v1689281163596!5m2!1ses!2sar" width="250" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <button id="openLargerMap">Ver mapa ampliado</button>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.635386207243!2d-58.41228692454813!3d-34.613380372950786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf0e488df63%3A0x780a09e4f181b5d5!2sGral.%20Urquiza%20250%2C%20C1215%20CABA!5e0!3m2!1ses!2sar!4v1689281163596!5m2!1ses!2sar" width="250" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <button id="openLargerMap">Ver mapa ampliado</button>
+        </div>
     </div>
     `;
 
