@@ -13,7 +13,6 @@ export function actualizarCuentaRegresiva() {
     if (fechaActual > fechaEvento) {
         fechaEvento.setFullYear(fechaActual.getFullYear() + 1); // Ajusta al próximo año si la fecha ya pasó
     }
-
     const diferenciaTiempo = fechaEvento.getTime() - fechaActual.getTime();
     const segundos = Math.floor(diferenciaTiempo / 1000);
     const minutos = Math.floor(segundos / 60);

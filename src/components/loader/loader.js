@@ -5,7 +5,6 @@ export const loader = async () => {
   const waitForBackgroundImageLoad = () => {
     return new Promise((resolve) => {
       const backgroundImage = getComputedStyle(contentElement).backgroundImage;
-      console.log(backgroundImage);
 
       const image = new Image();
       image.onload = resolve;

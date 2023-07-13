@@ -1,7 +1,6 @@
 import { atcb_action } from 'add-to-calendar-button';
 
 export const buttonCalendar = () => {
-  console.log('Paso por buttonCalendar');
   const config = {
     name: "Mili Birthday",
     description: "Ven a mi fiesta",

@@ -1,37 +1,44 @@
-.containerPlaceBirthday{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+.containerPlaceBirthday {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.containerPlaceBirthday h2, p, button{
-    margin: 0.5rem 0;
+.containerPlaceBirthday h2,
+p,
+button {
+  margin: 0.5rem 0;
 }
 
-.buttonCalendar, .buttonPlace, .buttonDirections{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
+.buttonCalendar,
+.buttonPlace,
+.buttonDirections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
 }
 
-.buttonCalendar .buttonPlace .buttonDirections, button{ 
-    background-color: #6f0e01;
-    padding: 0.5rem 2.5rem;
-    color: #fff;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 50px;
-    border: none;
+.buttonCalendar .buttonPlace .buttonDirections,
+button {
+  background-color: #6f0e01;
+  padding: 0.5rem 2.5rem;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
 }
 
-.buttonCalendar .buttonPlace .buttonDirections, button:hover{
-    background-color: #7c7d4f;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
+.buttonCalendar .buttonPlace .buttonDirections,
+button:hover {
+  background-color: #7c7d4f;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
+
