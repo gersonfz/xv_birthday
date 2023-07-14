@@ -2,6 +2,7 @@ import '../css/style.css';
 import { loader } from '../components/loader/loader';
 import { actualizarCuentaRegresiva } from '../components/countdown/countdown';
 import { placeBirthday } from '../components/placeBirthday.js/placeBirthday';
+import { mainCarousel } from '../components/carousel/mainCarousel';
 
 
 
@@ -20,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <section id="countdown"></section>
 
         <section class="sectionPlaceBirthday" id="placeBirthday"></section>
+
+        <section id="carousel"></section>
       </div>
     </section>
   `;
@@ -33,4 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       actualizarCuentaRegresiva();
       // Muestra el la seccion donde se hacen reservas, el lugar de la fiesta y como llegar
       placeBirthday();
+
+      mainCarousel();
+
 });
