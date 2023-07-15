@@ -2,6 +2,8 @@
 body{
   background: #f2e9dd;
 }
+
+
 .containerLoader {
   min-height: 100vh;
   display: flex;
@@ -60,6 +62,15 @@ body{
   background-position: center;
 }
 
+.paginaPrincipal{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .dateBirthday{
   height: 100vh;
   display: flex;
@@ -71,4 +82,27 @@ body{
   text-align: center;
 }
 
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
 
+.button{
+  background-color: #6f0e01;
+  padding: 0.5rem 2.5rem;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+}
+
+.button:hover{
+  background-color: #7c7d4f;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}

@@ -22,12 +22,12 @@ export const modalForm = (modal) => {
     `);
 
     // Obtener elementos necesarios
-    const button = document.querySelector("button");
+    const buttonConfirm = document.querySelector("#confirmButton");
     const closeButton = document.querySelector(".close");
 
 
     // Mostrar el modal cuando se hace clic en el botón
-    button.addEventListener("click", () => {
+    buttonConfirm.addEventListener("click", () => {
         modal.style.display = "block";
     });
 

@@ -1,0 +1,11 @@
+.containerMusicAndDressCode{
+    height: 100vh;
+    width: 100%;
+}
+
+.containerMusicAndDressCode div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

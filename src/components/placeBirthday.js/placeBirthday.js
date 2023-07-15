@@ -3,27 +3,28 @@ import { modalMap } from '../modal/modalMap';
 import { buttonCalendar } from './buttonCalendar';
 import './placeBirthday.css';
 
+
 export const placeBirthday = () => {
   const placeBirthday = document.querySelector('#placeBirthday');
 
   placeBirthday.innerHTML = `
     <div class="containerPlaceBirthday">
-      <div class="buttonCalendar">
+      <div class="buttonCalendar flex">
         <h2>Día</h2>
         <p>Miércoles 19 de junio - 17hs</p>
-        <button id="my-default-button">Agendar</button>
+        <button id="my-default-button" class="button">Agendar</button>
       </div>
-      <div class="buttonPlace">
+      <div class="buttonPlace flex">
         <h2>Lugar</h2>
         <p>Salon Avril</p>
         <div id="modalForm" class="modal"></div>
-        <button id="confirmButton">Confirmar<br>asistencia</button>
+        <button id="confirmButton" class="button">Confirmar<br>asistencia</button>
       </div>
-      <div class="buttonDirections">
+      <div class="buttonDirections flex">
         <h2>Dirección</h2>
         <p>Av. Pergamino 203 - CABA</p>
         <div id="modalM" class="modal"></div>
-        <button id="directionsButton">¿Cómo llegar?</button> 
+        <button id="directionsButton" class="button">¿Cómo llegar?</button> 
       </div>
     </div>
   `;
