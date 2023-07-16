@@ -7,9 +7,7 @@
   align-items: center;
 }
 
-.containerPlaceBirthday h2,
-p,
-button {
+.containerPlaceBirthday h2 p button {
   margin: 0.5rem 0;
 }
 

@@ -45,7 +45,7 @@
     width: 100%;
  }
  
- .formAssistance input, h3{
+ .formAssistance input h3{
     margin: 1rem 0.5rem;
  }
 

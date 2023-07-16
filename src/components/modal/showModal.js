@@ -1,37 +1,38 @@
 import './modal.css'
 
-export const modalDress = (modal) => {
+export const showModal = (modal, title, content) => {
     modal.innerHTML = (`
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div class="modalDress">
-                <h3>Dress code</h3>
-                <div class="inputText">
-                    <p>Contenido dress code</p>
-                </div>
+            <div class="modalContent">
+                <h3>${title}</h3>
+                    ${content}
                 <input type="submit" value="Enviar">
             </div>
         </div>
     `);
 
-    // Obtener elementos necesarios
-    const buttonDress = document.querySelector("#dressButton");
     const closeButton = modal.querySelector(".close");
 
     // Mostrar el modal cuando se hace clic en el botón
-    buttonDress.addEventListener("click", () => {
+    const show = () => {
         modal.style.display = "block";
-    });
+    };
 
     // Ocultar el modal cuando se hace clic en el botón de cerrar
-    closeButton.addEventListener("click", () => {
+    const hide = () => {
         modal.style.display = "none";
-    });
+    };
 
     // Ocultar el modal cuando se hace clic fuera de él
-    window.addEventListener("click", (event) => {
+    const handleOutsideClick = (event) => {
         if (event.target === modal) {
-            modal.style.display = "none";
+            hide();
         }
-    });
+    };
+
+    closeButton.addEventListener("click", hide);
+    window.addEventListener("click", handleOutsideClick);
+
+    return { show, hide };
 };

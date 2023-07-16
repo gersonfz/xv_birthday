@@ -1,6 +1,8 @@
 /* Loader */
 body{
-  background: #f2e9dd;
+  background: #f5f5f5;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
 }
 
 
@@ -12,12 +14,12 @@ body{
 }
 
 #loader {
-  height: 50px;
-  width: 50px;
-  background-color: #f20044;
+  height: 35px;
+  width: 35px;
+  background-color: #22443F;;
   position: relative;
   transform: rotate(-45deg);
-  box-shadow: -10px 10px 70px #f20044;
+  box-shadow: -8px 8px 50px #22443F;;
   animation: heart 0.6s linear infinite;
 }
 
@@ -35,32 +37,34 @@ body{
 
 #loader::before {
   content: '';
-  height: 50px;
-  width: 50px;
-  background-color: #f20044;
+  height: 35px;
+  width: 35px;
+  background-color: #22443F;;
   position: absolute;
   top: -50%;
-  border-radius: 35px;
-  box-shadow: -10px -10px 70px #f20044;
+  border-radius: 25px;
+  box-shadow: -8px -8px 50px #22443F;;
 }
 #loader::after {
   content: '';
-  height: 50px;
-  width: 50px;
-  background-color: #f20044;
+  height: 35px;
+  width: 35px;
+  background-color: #22443F;;
   position: absolute;
   right: -50%;
-  border-radius: 35px;
-  box-shadow: 10px 10px 70px #f20044;
+  border-radius: 25px;
+  box-shadow: 8px 8px 50px #22443F;;
 }
 
 #content{
   height: 100vh;
   width: 100vw;
-  background-image: url('/background-flowers.jpg');
+  background-image: url('/welcome-background.svg');
   background-size: cover;
   background-position: center;
 }
+
+/* Estilos de pagina principal */
 
 .paginaPrincipal{
   height: 100vh;
@@ -71,16 +75,59 @@ body{
   align-items: center;
 }
 
-.dateBirthday{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.paginaPrincipal{
+  color: #fff;
 }
-.dateBirthday h2, p{
+
+.paginaPrincipal h1{
+  font-family: 'Cookie', cursive;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.paginaPrincipal p{
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
   text-align: center;
 }
+
+
+.containerMainSection{
+  height: 100vh;
+}
+.containerMainSection div{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.containerMainSection h2{
+  font-family: 'Cookie', cursive;
+  font-size: 5rem;
+  font-weight: 400;
+  color: #22443F;
+}
+
+.containerMainSection h3{
+  color: #767B35;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.containerMainSection p {
+  margin: 1rem 0;
+  width: 70%;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+/* Estilos globales */
 
 .flex{
   display: flex;
@@ -91,10 +138,9 @@ body{
 }
 
 .button{
-  background-color: #6f0e01;
+  background-color: #767b35;
   padding: 0.5rem 2.5rem;
   color: #fff;
-  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1rem;
   font-weight: bold;
   border-radius: 50px;
@@ -106,3 +152,56 @@ body{
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
+
+
+/* Estilos de la flecha */
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: #000;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+/* Estilos countdown */
