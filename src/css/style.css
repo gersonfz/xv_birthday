@@ -1,6 +1,6 @@
 /* Loader */
 body{
-  background: #f5f5f5;
+  background: #fff;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
 }
@@ -204,4 +204,82 @@ body{
 	-webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
 
-/* Estilos countdown */
+/* Estilos parecidos a AOS */
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-down {
+  opacity: 0;
+  animation: fadeDown 1s ease forwards;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-left {
+  opacity: 0;
+  animation: fadeLeft 1s ease forwards;
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-right {
+  opacity: 0;
+  animation: fadeRight 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+
+/* Seccion de estilos flores principal */
+
+.flowersPrincipal{
+  position: absolute;
+  top: 0;
+}
+
+.flowersPrincipalAside{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   appContainer.innerHTML = `
     <section class="containerLoader">
     <div id="loader"></div>
-      <div id="content" style="display: none;">
+    <div id="content" class="fade-up" style="display: none;">
         <div class="paginaPrincipal">
           <p> Bienvenidos <br> a la invitacion de </p>
           <h1> Milagros </h1>
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="containerMainSection" style="display: none;"> 
           <div>
+            <img src="flowers-principal.svg" alt="Flores pagina principal" class="flowersPrincipal fade-down">
             <h2> Milagros </h2>
             <h3> Mis 15 años </h3>
             <img src="comilla-apertura.svg" alt="Comilla apertura" width="25" height="25" title="Comilla apertura">
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <section id="carousel" style="display: none;"></section>
         <section id="musicAndDressCode" style="display: none;"></section>
         <section id="gift" style="display: none;"></section>
-
+        
       </div>
     </section>
   `;
