@@ -1,80 +1,78 @@
-/* Estilos del modal */
 .modal {
   display: none;
+  z-index: 99999999;
   position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
-  background-color: rgba(240, 241, 233, 1);
+  background-color: rgba(245, 245, 245, 1);
+  top: 0;
+  left: 0; 
+  
 }
 
 .modal-content {
-  background-color: #f2e9dd;
-  margin: 15% auto;
+  position: relative;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 20%; /* Ajusta el margen superior según sea necesario */  
   padding: 20px;
-  border: 1px solid #888;
   border-radius: 20px;
-  width: 80%;
+  max-width: 80%; /* Cambia width por max-width */
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
 }
+.modal-content img{
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  top: -120px;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.section-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.section-content h3{
+  color: #22443F;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+
 
 /* Estilos para cerrar el modal */
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  color: #fff;
+  background-color: #767b35;
+  border-radius: 50%;
+  border: none;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 34px;
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
 }
+
+
 
 .close:hover,
 .close:focus {
-  color: black;
+  transform: scale(0.95); /* Reducir el tamaño del botón al hacer hover o focus */
   text-decoration: none;
   cursor: pointer;
 }
 
- /* Estilos para el formulario de modalForm */
-
- .formAssistance{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
- }
- 
- .formAssistance input h3{
-    margin: 1rem 0.5rem;
- }
-
- 
- .formAssistance input:last-child{
-     width: fit-content;
- }
-
- .inputText{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
- }
-
- .inputText input, textarea {
-    width: 100%;
- }
-
-
-/* Configuraciones del mapa */
-
-.map{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
-}
-.map iframe {
-  margin: 1rem 0; 
+/* Estilos para desactivar el scroll */
+body.modal-open {
+  overflow: hidden;
 }

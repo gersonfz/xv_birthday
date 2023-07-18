@@ -35,17 +35,26 @@ export const musicAndDressCode = () => {
         <input type="text" id="name" name="name" placeholder="Tu nombre">
         <input type="text" id="song" name="song" placeholder="Nombre de la canción y autor">
         <input type="text" id="link" name="link" placeholder="Si lo deseas, enlace de YouTube">
+        <input class="button" type="submit" value="Enviar">
+
     </div>
     `
 
     const contentDressCode = `
     <div class="inputText">
         <p>Contenido dress code</p>
+        <input class="button" type="submit" value="Enviar">
     </div>
     `
     const musicModal = showModal(modalM, "Música", contentMusic); // Crear el modal de música
     const dressModal = showModal(modalD, "Dress Code", contentDressCode); // Crear el modal de dress code
 
-    musicButton.addEventListener("click", musicModal.show); // Mostrar el modal de música al hacer clic en el botón
-    dressButton.addEventListener("click", dressModal.show); // Mostrar el modal de dress code al hacer clic en el botón
+    musicButton.addEventListener("click", () => {
+        musicModal.show();
+      });
+      
+      dressButton.addEventListener("click", () => {
+        dressModal.show();
+      });
+      
 };
