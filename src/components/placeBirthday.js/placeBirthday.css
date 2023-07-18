@@ -10,6 +10,7 @@
   background-size: cover;
   color: #81948b;
   position: relative;
+  margin-bottom: 2rem ;
 }
 
 .containerPlaceBirthday > div:first-child {
@@ -149,6 +150,10 @@
 }
 
 /* Configuraciones del mapa */
+
+.buttonDirections p{
+  text-align: center;
+}
 
 .map{
   display: flex;

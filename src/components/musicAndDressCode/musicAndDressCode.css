@@ -1,11 +1,74 @@
-.containerMusicAndDressCode{
+#musicAndDressCode{
     height: 100vh;
     width: 100%;
+    background-image: url('/placeBirthday-background.svg');
+    margin-top: 3rem;    
 }
 
-.containerMusicAndDressCode div:first-child{
+.containerMusicAndDressCode{
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    color: #81948b;
+    font-weight: 100;
+}
+.titleMusicDress img{
+    margin: 1rem 0; 
+}
+.titleMusicDress p{
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+.musicSection,.dressSection{
+    width: 60%;
+}
+.musicSection.dressSection, h3{
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 1rem 0;
+}
+
+.musicSection img{
+    width: 50px;
+    height: 50px;
+    margin: 1rem 0;
+}
+.musicSection.dressSection p{
+    margin-top: 0.5rem;
+    font-size: 1rem ;
+}
+.musicSection.dressSection, button{
+    margin-top: 1rem;
+}
+
+.inputText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.inputText input{
+    text-align: center;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #81948b;
+    margin: 1rem 0;
+    padding-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.inputText input:last-child{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

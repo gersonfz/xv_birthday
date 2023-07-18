@@ -1,10 +1,9 @@
 
 #carousel{
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
+    background-image: url('/carousel-background.svg');
+    margin-bottom: 5rem;
 }
 
 .carousel-container{
@@ -13,15 +12,54 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
+
+.group-carousel{
+  width: 120vw;
+}
+
+.carousel-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  text-align: center;
+}
+.carousel-title h3{
+  font-family: 'Cookie', cursive;
+  font-weight: 400;
+  font-size: 2.5rem;
+  width: 80%;
+  margin: 1.5rem 0;
+  color:  #22443F;
+}
+.carousel-title p{
+  letter-spacing: 1px;
+  color: #81948b;
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+
+#animationWindow {
+  width: 150px;
+} 
+#animationWindow  path{
+  fill: #22443F;
+}
+
+
 .carousel-indicators{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 1rem 2rem;
 }
-div .carousel-indicator{
-    margin: 0 1rem;
+.carousel-indicators div {
+  margin: 0 1rem;
 }
+
 .carousel-indicator {
     width: 10px;
     height: 10px;
@@ -35,14 +73,14 @@ div .carousel-indicator{
   }
   
   .carousel-image {
-    display: block;
+    position: relative;
     width: 80%;
     height: auto;
     border: 1px solid #ccc;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    transform: rotate(-2deg);
     background-color: white;
   }
   
@@ -54,7 +92,6 @@ div .carousel-indicator{
     width: 50%;
     height: 20px;
     background-color: rgba(0, 0, 0, 0.1);
-    z-index: -1;
     transform: skew(-15deg);
   }
   
@@ -66,7 +103,6 @@ div .carousel-indicator{
     width: 100%;
     height: 30px;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
-    z-index: -1;
   }
   
   .carousel-indicator {

@@ -6,12 +6,13 @@ export const musicAndDressCode = () => {
 
     musicAndDressCode.innerHTML = (`
         <div class="containerMusicAndDressCode">
-            <div>
-                <h2>Fiesta</h2>
+            <div class="titleMusicDress">
+                <img src="fiesta-title.svg" alt="Titulo fiesta">
                 <p>Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta</p>
             </div>
             <div class="musicSection flex">
                 <h3>Música</h3>
+                <img src="musica.svg" alt="Logo musica">
                 <p>¿Cuál es la canción que no debe faltar en la playlist de la fiesta?</p>
                 <div id="modalMusic" class="modal"></div>
                 <button id="musicButton" class="button">Sugerir<br>canción</button>

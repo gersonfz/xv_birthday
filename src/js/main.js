@@ -37,8 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <section class="sectionPlaceBirthday" id="placeBirthday" style="display: none;"></section>
         <section id="carousel" style="display: none;"></section>
         <section id="musicAndDressCode" style="display: none;"></section>
-        <section id="gift" style="display: none;"></section>
-        
+        <section id="gift" style="display: none;"></section>        
       </div>
     </section>
   `;
