@@ -1,8 +1,8 @@
 #musicAndDressCode{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-image: url('/placeBirthday-background.svg');
-    margin-top: 3rem;    
+    background-repeat: no-repeat;
 }
 
 .containerMusicAndDressCode{
@@ -68,7 +68,4 @@
 
 .inputText input:last-child{
     width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

@@ -8,9 +8,10 @@
   background-image: url("/placeBirthday-background.svg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   color: #81948b;
   position: relative;
-  margin-bottom: 2rem ;
+  margin-bottom: 3rem;
 }
 
 .containerPlaceBirthday > div:first-child {

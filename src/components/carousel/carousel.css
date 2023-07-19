@@ -1,9 +1,10 @@
 
 #carousel{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-image: url('/carousel-background.svg');
-    margin-bottom: 5rem;
+    background-repeat: no-repeat;
+    margin-bottom: 3rem;
 }
 
 .carousel-container{
