@@ -3,6 +3,8 @@
     width: 100%;
     background-image: url('/placeBirthday-background.svg');
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .containerMusicAndDressCode{
