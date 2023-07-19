@@ -11,7 +11,9 @@ export const mainCarousel = () => {
         <p>Junto a personas que son muy importantes en mi vida</p>
       </div>
       <div id="animationWindow"></div>
-      <img class="carousel-image" src="" alt="Carousel Image">
+      <div class="carousel-image-container">
+        <img class="carousel-image" src="carousel-image" alt="Carousel Image">
+      </div> 
       <div class="carousel-indicators">
         <div class="carousel-indicator active"></div>
         <div class="carousel-indicator"></div>
@@ -35,10 +37,10 @@ export const mainCarousel = () => {
   
 
     const images = [
-        'https://images.pexels.com/photos/3910065/pexels-photo-3910065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        'https://images.pexels.com/photos/3392937/pexels-photo-3392937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        'https://images.pexels.com/photos/3910073/pexels-photo-3910073.jpeg?auto=compress&cs=tinysrgb&w=600',
-        'https://images.pexels.com/photos/3392982/pexels-photo-3392982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        '/carousel-image-1.jpeg',
+        '/carousel-image-2.jpeg',
+        '/carousel-image-3.jpeg',
+        '/carousel-image-4.jpeg',
     ];
 
     const carouselInstance = new Carousel(images);

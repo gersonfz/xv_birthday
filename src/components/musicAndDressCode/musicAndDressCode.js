@@ -7,18 +7,19 @@ export const musicAndDressCode = () => {
     musicAndDressCode.innerHTML = (`
         <div class="containerMusicAndDressCode">
             <div class="titleMusicDress">
-                <img src="fiesta-title.svg" alt="Titulo fiesta">
+                <img class="imgTitle" src="fiesta-title.svg" alt="Titulo fiesta">
                 <p>Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta</p>
             </div>
             <div class="musicSection flex">
                 <h3>Música</h3>
-                <img src="musica.svg" alt="Logo musica">
+                <img class="imgMusicAndDress" src="musica.svg" alt="Logo musica">
                 <p>¿Cuál es la canción que no debe faltar en la playlist de la fiesta?</p>
                 <div id="modalMusic" class="modal"></div>
                 <button id="musicButton" class="button">Sugerir<br>canción</button>
             </div>
             <div class="dressSection flex">
                 <h3>Dress Code</h3>
+                <img class="imgMusicAndDress" src="vestuario.svg" alt="Logo vestuario">
                 <p>Una orientación para tu vestuario</p>
                 <div id="modalDress" class="modal"></div>
                 <button id="dressButton" class="button">Ver más</button>
@@ -33,9 +34,9 @@ export const musicAndDressCode = () => {
 
     const contentMusic = `
     <div class="inputText">
-        <input type="text" id="name" name="name" placeholder="Tu nombre">
-        <input type="text" id="song" name="song" placeholder="Nombre de la canción y autor">
-        <input type="text" id="link" name="link" placeholder="Si lo deseas, enlace de YouTube">
+        <input class="inputMusic" type="text" id="name" name="name" placeholder="Tu nombre">
+        <input class="inputMusic" type="text" id="song" name="song" placeholder="Nombre de la canción y autor">
+        <input class="inputMusic" type="text" id="link" name="link" placeholder="Si lo deseas, enlace de YouTube">
         <input class="button" type="submit" value="Enviar">
 
     </div>
@@ -43,7 +44,9 @@ export const musicAndDressCode = () => {
 
     const contentDressCode = `
     <div class="inputText">
-        <p>Contenido dress code</p>
+        <p>Elegante Sport</p>
+        <p>Colores neutros</p>
+        <p>(Excepto azul)</p>
         <input class="button" type="submit" value="Enviar">
     </div>
     `

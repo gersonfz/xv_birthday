@@ -1,12 +1,11 @@
 
 #carousel{
-    min-height: 100vh;
+    height: 850px;
     width: 100%;
     background-image: url('/carousel-background.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-bottom: 3rem;
 }
 
 .carousel-container{
@@ -29,7 +28,7 @@
   align-items: center;
   margin-top: 2rem;
   text-align: center;
-  width: 90%;
+  width: 80%;
 }
 .carousel-title h3{
   font-family: 'Cookie', cursive;
@@ -76,7 +75,7 @@
     background-color: #333;
   }
   
-  .carousel-image {
+  .carousel-image-container {
     position: relative;
     width: 80%;
     height: auto;
@@ -86,7 +85,16 @@
     margin-bottom: 1rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     background-color: white;
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
   }
+
+  .carousel-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
   
   .carousel-image::before {
     content: '';
