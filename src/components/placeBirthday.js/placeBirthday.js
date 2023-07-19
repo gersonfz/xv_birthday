@@ -13,7 +13,7 @@ export const placeBirthday = () => {
       </div>
       <div class="buttonCalendar flex">
         <h2>Día</h2>
-        <p>Miércoles 19 de junio - 17hs</p>
+        <p>Sabado 19 de agosto - 21hs</p>
         <button id="my-default-button" class="button">Agendar</button>
       </div>
       <div class="buttonPlace flex">
