@@ -1,3 +1,86 @@
-.containerGift{
-    height: 100vh;
+#gift {
+  max-height: 100vh;
+  width: 100vw;
+  background-image: url("/gift-background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.containerGift {
+  position: relative;
+  min-height: 100vh;
+}
+
+.containerGift h2 {
+  position: absolute;
+  top: 100px;
+  font-family: "Cookie", cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #22443f;
+}
+
+.containerGift p {
+  text-align: center;
+  color: #81948b;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin: 1rem 0;
+}
+
+/* Estilos de la flecha */
+
+#scrollToTop{
+    position: absolute;
+    bottom: 25px;
+}
+
+.arrowUp {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 40px;
+}
+
+.arrowUp path {
+	stroke: #000;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrowUp path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrowUp path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrowUp path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
 }

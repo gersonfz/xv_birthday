@@ -47,7 +47,6 @@ export const musicAndDressCode = () => {
         <p>Elegante Sport</p>
         <p>Colores neutros</p>
         <p>(Excepto azul)</p>
-        <input class="button" type="submit" value="Enviar">
     </div>
     `
     const musicModal = showModal(modalM, "Música", contentMusic); // Crear el modal de música
