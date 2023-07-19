@@ -2,6 +2,10 @@ import { showModal } from '../modal/showModal';
 import { buttonCalendar } from './buttonCalendar';
 import './placeBirthday.css';
 import '../modal/modal.css';
+import { showDirections } from './showDirections';
+import { contentForm } from './contentForm';
+import { contentMap } from './contentMap';
+import { formBackend } from './formBackend';
 
 export const placeBirthday = () => {
   const placeBirthday = document.querySelector('#placeBirthday');
@@ -33,40 +37,6 @@ export const placeBirthday = () => {
 
   buttonCalendar();
 
-  const contentForm = `
-    <form class="formAssistance">
-      <div class="inputRadio">
-        <div class="inputRadio-margin">
-          <input type="radio" id="confirm-yes" name="attendance" value="yes" checked >
-          <label for="confirm-yes">Si,<br>confirmo</label>
-        </div>
-        <div class="inputRadio-margin">
-          <input type="radio" id="confirm-no" name="attendance" value="no">
-          <label for="confirm-no">No<br>puedo :(</label>
-        </div>
-
-      </div>
-      <div class="inputText">
-        <div class="form-group">
-          <input type="text" id="name" name="name" placeholder="Ingrese su nombre completo:">
-        </div>
-        <div class="form-group">
-          <textarea id="important-data" name="important-data" placeholder="Agregue algún dato importante  Ej: Soy vegetariano"></textarea>
-        </div>
-      </div>
-      <input class="button" type="submit" value="Enviar">
-    </form>
-  `;
-
-  const contentMap = `
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.745966844494!2d-58.425655400000004!3d-34.5599868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5af91361e41%3A0x56b3450440c3542c!2sEl%20Castillo%20Eventos!5e0!3m2!1ses-419!2sar!4v1689556995653!5m2!1ses-419!2sar" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <button id="openLargerMap" class="button">Ver mapa ampliado</button>
-    </div>
-  `;
-
-
-
   const confirmButton = document.querySelector("#confirmButton");
   const directionsButton = document.querySelector("#directionsButton");
   const modalF = document.querySelector('#modalForm');
@@ -87,32 +57,10 @@ export const placeBirthday = () => {
   const openLargerMapButton = document.getElementById("openLargerMap");
 
   // Agrega un controlador de eventos al botón
+
   openLargerMapButton.addEventListener("click", showDirections);
+  showDirections();
 
-  // Función que se ejecuta al hacer clic en el botón
-  function showDirections() {
-    // Verificar si el navegador soporta la geolocalización
-    if ("geolocation" in navigator) {
-      // Obtener la ubicación actual del usuario
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          // Obtener las coordenadas de la ubicación actual
-          const latitude = position.coords.latitude;
-          const longitude = position.coords.longitude;
-
-          // Construir la URL de dirección con la ubicación actual y el destino del mapa
-          const directionsUrl = `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=El+Castillo+Eventos`;
-
-          // Abrir una nueva ventana o pestaña con la ruta
-          window.open(directionsUrl);
-        },
-        (error) => {
-          console.error("Error en la geolocalización:", error);
-        }
-      );
-    } else {
-      console.error("Geolocalización no está disponible en este navegador.");
-    }
-  }
+  formBackend(formModal);
 
 };

@@ -1,4 +1,5 @@
 import { showModal } from '../modal/showModal';
+import { formBackendMusic } from './formBackend';
 import './musicAndDressCode.css';
 
 export const musicAndDressCode = () => {
@@ -33,13 +34,12 @@ export const musicAndDressCode = () => {
     const modalD = document.querySelector('#modalDress');
 
     const contentMusic = `
-    <div class="inputText">
+    <form class="inputText" action="http://localhost:8080/send-mail/form-music" method="POST">
         <input class="inputMusic" type="text" id="name" name="name" placeholder="Tu nombre">
         <input class="inputMusic" type="text" id="song" name="song" placeholder="Nombre de la canción y autor">
         <input class="inputMusic" type="text" id="link" name="link" placeholder="Si lo deseas, enlace de YouTube">
         <input class="button" type="submit" value="Enviar">
-
-    </div>
+    </form>
     `
 
     const contentDressCode = `
@@ -59,5 +59,5 @@ export const musicAndDressCode = () => {
       dressButton.addEventListener("click", () => {
         dressModal.show();
       });
-      
+      formBackendMusic(musicModal);
 };
