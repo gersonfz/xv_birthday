@@ -26,9 +26,9 @@ export const formBackendMusic = () => {
         })
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 if (data.redirect) {
-                    window.location.href = 'http://localhost:5173/'; // Redirige a la URL deseada
-
+                    window.location.href = data.redirect;
                 } else {
                     // Manejar la respuesta normalmente
                     console.log(data);
