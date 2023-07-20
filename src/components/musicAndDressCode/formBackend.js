@@ -1,23 +1,26 @@
-
 export const formBackendMusic = () => {
-    const form = document.querySelector('.inputText');
+    const form = document.querySelector('.inputMusicText');
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Evita el envío por defecto del formulario
 
+        // Mostrar el loading
+        const loadingMessage = document.getElementById('loading');
+        loadingMessage.style.display = 'block';
+
         // Obtén los valores del formulario
-        const name = document.querySelector('#name').value;
+        const nameMusic = document.querySelector('#nameMusic').value;
         const song = document.querySelector('#song').value;
         const link = document.querySelector('#link').value;
 
         // Crea un objeto con los datos del formulario
         const formData = {
-            name,
+            nameMusic,
             song,
             link
         };
 
         // Envía los datos al backend
-        fetch('https://xv-backend.onrender.com/send-mail/form-music', {
+        fetch('https://xv-backend.onrender.com/send-music', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,16 +29,20 @@ export const formBackendMusic = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-                if (data.redirect) {
+                // Ocultar el loading y mostrar el mensaje de enviado correctamente
+                loadingMessage.style.display = 'none';
+                const sentMessage = document.getElementById('sent-message');
+                sentMessage.style.display = 'block';
+
+                // Redirigir a otra página después de unos segundos
+                setTimeout(() => {
                     window.location.href = data.redirect;
-                } else {
-                    // Manejar la respuesta normalmente
-                    console.log(data);
-                }
+                }, 2000); // Redirigir después de 2 segundos (puedes ajustar el tiempo según tus necesidades)
             })
             .catch(error => {
-                console.error(error); // Maneja el error si ocurre
+                // Maneja el error si ocurre
+                console.error(error);
+                loadingMessage.style.display = 'none'; // Ocultar el loading en caso de error
             });
     });
 };

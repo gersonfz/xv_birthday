@@ -34,9 +34,11 @@ export const musicAndDressCode = () => {
     const modalD = document.querySelector('#modalDress');
 
     const contentMusic = `
-    <form class="inputText" action="https://xv-backend.onrender.com/send-mail/form-birthday" method="POST">
-        <input class="inputMusic" type="text" id="name" name="name" placeholder="Tu nombre">
-        <input class="inputMusic" type="text" id="song" name="song" placeholder="Nombre de la canción y autor">
+    <div class="loading" id="loading" style="display: none;">Enviando...</div>
+    <div class="loading" id="sent-message" style="display: none;">Formulario enviado correctamente</div>
+    <form class="inputMusicText" action="https://xv-backend.onrender.com/send-music" method="POST">
+        <input class="inputMusic" type="text" id="nameMusic" name="nameMusic" placeholder="Tu nombre" required>
+        <input class="inputMusic" type="text" id="song" name="song" placeholder="Nombre de la canción y autor" required>
         <input class="inputMusic" type="text" id="link" name="link" placeholder="Si lo deseas, enlace de YouTube">
         <input class="button" type="submit" value="Enviar">
     </form>
@@ -54,10 +56,10 @@ export const musicAndDressCode = () => {
 
     musicButton.addEventListener("click", () => {
         musicModal.show();
-      });
-      
-      dressButton.addEventListener("click", () => {
+    });
+
+    dressButton.addEventListener("click", () => {
         dressModal.show();
-      });
-      formBackendMusic(musicModal);
+    });
+    formBackendMusic();
 };

@@ -52,14 +52,15 @@
     margin-top: 1rem;
 }
 
-.inputText{
+.inputText
+.inputMusicText {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.inputText .inputMusic{
+.inputMusicText .inputMusic{
     text-align: center;
     width: 100%;
     border-top: none;
@@ -72,9 +73,11 @@
 }
 
 .inputText p{
-    margin: 0.5rem 0;
+    margin: 1rem 0;
 }
 
-.inputText .button {
+.inputText
+.inputMusicText
+,.button {
     margin-top: 1rem;
 }

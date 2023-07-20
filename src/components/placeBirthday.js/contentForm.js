@@ -1,5 +1,7 @@
 export const contentForm = `
-<form class="formAssistance" action="https://xv-backend.onrender.com/send-mail/form-birthday" method="POST">
+<div class="loading" id="loadingBirthday" style="display: none;">Enviando...</div>
+<div class="loading" id="sentMessageBirthday" style="display: none;">Formulario enviado correctamente</div>
+<form class="formAssistance" action="https://xv-backend.onrender.com/send-mail" method="POST">
   <div class="inputRadio">
     <div class="inputRadio-margin">
       <input type="radio" id="confirm-yes" name="attendance" value="yes" checked >
@@ -13,7 +15,7 @@ export const contentForm = `
   </div>
   <div class="inputText">
     <div class="form-group">
-      <input type="text" id="name" name="name" placeholder="Ingrese su nombre completo:">
+      <input type="text" id="name" name="name" placeholder="Ingrese su nombre completo:" required>
     </div>
     <div class="form-group">
       <textarea id="important-data" name="important-data" placeholder="Agregue algún dato importante  Ej: Soy vegetariano"></textarea>

@@ -53,14 +53,14 @@ export const placeBirthday = () => {
     modalMap.show();
   });
 
-  // Obtén una referencia al botón
-  const openLargerMapButton = document.getElementById("openLargerMap");
+  // Obtener el botón "Ver mapa ampliado" por su identificador
+  const verMapaAmpliadoButton = document.getElementById('openLargerMap');
 
-  // Agrega un controlador de eventos al botón
+  // Agregar el evento de clic al botón para ejecutar la función showDirections
+  verMapaAmpliadoButton.addEventListener('click', showDirections);
 
-  openLargerMapButton.addEventListener("click", showDirections);
   showDirections();
 
-  formBackend(formModal);
+  formBackend();
 
 };
