@@ -34,7 +34,7 @@ export const musicAndDressCode = () => {
     const modalD = document.querySelector('#modalDress');
 
     const contentMusic = `
-    <form class="inputText" action="http://localhost:8080/send-mail/form-music" method="POST">
+    <form class="inputText" action="https://xv-backend.onrender.com/send-mail/form-birthday" method="POST">
         <input class="inputMusic" type="text" id="name" name="name" placeholder="Tu nombre">
         <input class="inputMusic" type="text" id="song" name="song" placeholder="Nombre de la canción y autor">
         <input class="inputMusic" type="text" id="link" name="link" placeholder="Si lo deseas, enlace de YouTube">

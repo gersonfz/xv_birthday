@@ -17,7 +17,7 @@ export const formBackendMusic = () => {
         };
 
         // Envía los datos al backend
-        fetch('http://localhost:8080/send-mail/form-music', {
+        fetch('https://xv-backend.onrender.com/send-mail/form-music', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

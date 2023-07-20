@@ -1,5 +1,5 @@
 export const contentForm = `
-<form class="formAssistance" action="http://localhost:8080/send-mail/place-birthday" method="POST">
+<form class="formAssistance" action="https://xv-backend.onrender.com/send-mail/form-birthday" method="POST">
   <div class="inputRadio">
     <div class="inputRadio-margin">
       <input type="radio" id="confirm-yes" name="attendance" value="yes" checked >

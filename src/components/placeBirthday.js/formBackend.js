@@ -16,12 +16,13 @@ export const formBackend = () => {
         };
 
         // Envía los datos al backend
-        fetch('http://localhost:8080/send-mail/form-birthday', {
+        fetch('https://xv-backend.onrender.com/send-mail/form-birthday', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(formData),
+
         })
             .then(response => response.json())
             .then(data => {
